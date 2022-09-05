@@ -8,8 +8,25 @@ function ShowTea() {
     }]);
 
 
+    useEffect(() => {
+        fetch('/tea')
+        .then(response => {
+            if(response.ok){
+                return response.json()
+            }
+        })
+        .then(jsonResponse => setTea(jsonResponse));
+    })
+
   return (
-    <div>showTea
+    <div>
+            {tea.map(t =>
+                <div>
+                    <h2>{t.name}</h2>
+                    <img src={t.img}></img>
+                </div>
+            )}
+
      
 
     </div>

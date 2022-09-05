@@ -25,6 +25,9 @@ router.post('/new', (request, response) => {
     });
    
    newTea.save()
+   .then((result) => {
+    response.redirect('/')
+   })
 })
 
 

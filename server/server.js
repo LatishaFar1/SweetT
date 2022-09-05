@@ -3,9 +3,10 @@ const app = express();
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Tea = require('./models/teasModel');
+const cors = require('cors');
 
 
-
+app.use(cors());
 
 // CONNECTING TO MONGODB
 const dbURL = 'mongodb+srv://Tish:5hTs0PblMn2ZzWkj@teas.twayqzg.mongodb.net/Sweet-T';

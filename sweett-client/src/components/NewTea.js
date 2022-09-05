@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 
 function NewTea() {
 
@@ -20,7 +21,13 @@ function NewTea() {
 
     function handleSubmit(e){
         e.preventDefault();
-        console.log(form);
+
+        const newTea = {
+            name: form.name,
+            img: form.img
+        }
+
+        axios.post('http://localhost:4000/new', newTea)
     }
 
 

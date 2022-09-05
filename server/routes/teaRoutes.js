@@ -16,11 +16,11 @@ router.get('/tea', (request, response) => {
 
 //POST REQUEST
 
-router.post('/tea', (request, response) => {
+router.post('/new', (request, response) => {
     //create new instance of a post
-   const tea = new Tea(request.body)
+   const newTea = new Tea(request.body)
    
-   tea.save()
+   newTea.save()
    .then((result) => {
     response.redirect('/')
    })

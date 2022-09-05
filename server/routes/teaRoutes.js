@@ -17,13 +17,14 @@ router.get('/tea', (request, response) => {
 //POST REQUEST
 
 router.post('/new', (request, response) => {
-    //create new instance of a post
-   const newTea = new Tea(request.body)
+    //create new instance of tea
+    const name = request.body.name;
+    const img = request.body.img;
+    const newTea = new Tea({
+        name, img
+    });
    
    newTea.save()
-   .then((result) => {
-    response.redirect('/')
-   })
 })
 
 

@@ -7,6 +7,7 @@ const cors = require('cors');
 
 
 app.use(cors());
+app.use(express.json());
 
 // CONNECTING TO MONGODB
 const dbURL = 'mongodb+srv://Tish:5hTs0PblMn2ZzWkj@teas.twayqzg.mongodb.net/Sweet-T';
@@ -19,17 +20,3 @@ mongoose.connect(dbURL)
 app.use('/', require('./routes/teaRoutes'))
 
 
-
-// GET REQUEST
-
-
-
-// app.get('/', (request, response) => {
-//     Tea.find()
-//     .then((result) => {
-//         response.send(result);
-//     })
-//     .catch((error)=> {
-//         console.log(error)
-//     })
-// })

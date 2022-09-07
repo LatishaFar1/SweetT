@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import {Button} from '@mui/material';
 
 function NewTea() {
 
@@ -44,8 +45,8 @@ function NewTea() {
                 <label> Image URL:</label>
                 <input type='text' onChange={handleChange} name='img' value={form.img}></input>
             </div>
-
-            <button onClick={handleSubmit}>Submit Tea</button>
+            
+            <Button onClick={handleSubmit}>Submit Tea</Button>
         </form>
     </div>
   )

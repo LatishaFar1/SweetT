@@ -21,7 +21,7 @@ function ShowTea() {
   return (
     <div>
             {tea.map(t =>
-                <div>
+                <div key={t.id}>
                     <h2>{t.name}</h2>
                     <img src={t.img}></img>
                 </div>

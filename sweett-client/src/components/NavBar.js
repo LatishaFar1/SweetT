@@ -8,10 +8,19 @@ function NavBar() {
   return (
     <div>
       <Box sx={{...dFlex, minHeight: 50, borderBottom: '1px solid #ddd'}}>
-        <img src={logo} size={20} />
-       <Container>
+    
 
+       <Container maxWidth='xl'>
+          <Box sx={{
+            ...flexBetweenCenter, minHeight: 50, px: 4
+          }}>
+             
+
+              <img src={logo} className='logo' alt='sweet t logo' />
+              
+          </Box>
        </Container>
+
       </Box>
     </div>
   )

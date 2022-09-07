@@ -5,3 +5,11 @@ html, body{
     overflow: hidden;
     font-family: 'Nunito', sans-serif;
 }
+
+
+/* LOGO */
+.logo{
+    height: 40vh;
+    width: 40vh;
+    padding-right: 100px;
+}

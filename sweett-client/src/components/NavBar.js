@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { flexCenter, dFlex, flexBetweenCenter } from '../theme/styles';
 import logo from '../photos/logo.jpeg';
 import Container from '@mui/material/Container';
+import {Link} from "react-router-dom";
 
 function NavBar() {
   return (
@@ -15,11 +16,23 @@ function NavBar() {
             ...flexBetweenCenter, minHeight: 50, px: 4
           }}>
              
-
               <img src={logo} className='logo' alt='sweet t logo' />
-              
+          
           </Box>
        </Container>
+
+          <div className='nav'>
+
+              <Link to='/'>
+                  Home
+              </Link>
+
+
+              <Link to='/tea'>
+                  Tea
+              </Link>
+
+          </div>
 
       </Box>
     </div>

@@ -33,18 +33,18 @@ function NavBar() {
 
          </nav>
 
-      <Box sx={{...dFlex, minHeight: 50, borderBottom: '1px solid #ddd'}}>
-    
+      {/* <Box sx={{ minHeight: 50, borderBottom: '1px solid #ddd'}}>
+     */}
+        <div className='row'>
 
-       <Container maxWidth='xl'>
-          <Box sx={{
-            ...flexBetweenCenter, minHeight: 50, px: 4
-          }}>
+      
+       {/* <Container>
+          <Box> */}
              
-              <img src={logo} className='logo' alt='sweet t logo' />
-          
-          </Box>
-       </Container>
+              <img src={logo} size={100} className='logo' alt='sweet t logo' />
+              </div>
+          {/* </Box>
+       </Container> */}
 
 
 
@@ -63,8 +63,8 @@ function NavBar() {
 
               
     
-
-      </Box>
+{/* 
+      </Box> */}
     </div>
   )
 }

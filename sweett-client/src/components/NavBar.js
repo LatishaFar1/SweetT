@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Box from '@mui/material/Box';
 import { flexCenter, dFlex, flexBetweenCenter } from '../theme/styles';
-import logo from '../photos/logo.jpeg';
+
 import Container from '@mui/material/Container';
 import {Link} from "react-router-dom";
 import {AiOutlineHome, AiOutlineCoffee} from 'react-icons/ai';
@@ -35,14 +35,13 @@ function NavBar() {
 
       {/* <Box sx={{ minHeight: 50, borderBottom: '1px solid #ddd'}}>
      */}
-        <div className='row'>
+
 
       
        {/* <Container>
           <Box> */}
              
-              <img src={logo} size={100} className='logo' alt='sweet t logo' />
-              </div>
+          
           {/* </Box>
        </Container> */}
 

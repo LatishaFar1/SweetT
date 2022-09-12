@@ -89,7 +89,16 @@ a{
 
 
 /* TEA */
-.tea-img{
-    height: 200px;
-    width: 200px;
+
+.all-tea{
+    padding-top: 5em;
+    padding-left: 19em;
+}
+
+.hide-form{
+    padding-top: 5em;
+}
+
+.hide-form-btn{
+
 }

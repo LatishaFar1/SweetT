@@ -1,6 +1,12 @@
 import { Button} from '@mui/material';
 import React, {useEffect, useState} from 'react'
 import NewTea from './NewTea';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import { Grid } from '@mui/material';
 
 function ShowTea() {
 
@@ -33,18 +39,32 @@ function ShowTea() {
 
   return (
     <div>
+        <Grid container spacing= {4} justify='center' alignItems="center" className='all-tea'>
             {tea.map(t =>
-                <div key={t.id}>
-                   
-                    <br/>
-                    <img className='tea-img' src={t.img}></img>
-                    <h2>{t.name}</h2>
-                </div>
+
+                    <Grid item  md>
+                        <Card sx={{ maxWidth: 345 }}>
+                        <CardActionArea>
+                        <CardMedia
+                            component="img"
+                            height="170"
+                            src={t.img}
+                            alt="tea photo"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                            {t.name}
+                            </Typography>
+                        </CardContent>
+                        </CardActionArea>
+                        </Card>
+                    </Grid>
+            
             )}
 
-
-        <div>
-        <Button onClick={handleForm}>Don't see one you like? Submit a new one!</Button>
+        </Grid>
+    <div className="hide-form">
+        <Button onClick={handleForm} className='hide-form-btn'>Don't see one you like? Submit a new one!</Button>
          
             {hideForm ? <NewTea/> : null}
         

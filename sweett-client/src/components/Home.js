@@ -13,8 +13,7 @@ function Home() {
            
         <div className='home'>
           
-      
-      HOME
+    
 
       </div>
     </>

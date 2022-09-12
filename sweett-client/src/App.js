@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.css';
-import NewTea from './components/NewTea';
 import ShowTea from './components/ShowTea';
 import NavBar from './components/NavBar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -18,7 +17,7 @@ function App() {
 
           <Route path='/' element={<Home/>} />
          
-          {/* <Route path='/tea' element={<ShowTea/>} /> */}
+          <Route path='/tea' element={<ShowTea/>} />
 
         </Routes>
 

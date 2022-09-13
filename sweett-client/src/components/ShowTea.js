@@ -39,7 +39,7 @@ function ShowTea() {
 
   return (
     <div>
-        <Grid container spacing= {4} justify='center' alignItems="center" className='all-tea'>
+        <Grid container spacing= {4} className='all-tea'>
             {tea.map(t =>
 
                     <Grid item  md>
@@ -64,7 +64,15 @@ function ShowTea() {
 
         </Grid>
     <div className="hide-form">
-        <Button onClick={handleForm} className='hide-form-btn'>Don't see one you like? Submit a new one!</Button>
+        <Button onClick={handleForm} className='hide-form-btn'  style={{
+        borderRadius: 35,
+        backgroundColor: '#2a2a2a',
+        padding: '25px',
+        fontSize: '18px',
+        color:'#ffffff', 
+        margin: '0 auto', 
+        display: 'flex'
+    }}>Don't see one you like? Submit a new one!</Button>
          
             {hideForm ? <NewTea/> : null}
         

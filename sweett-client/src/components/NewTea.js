@@ -34,7 +34,7 @@ function NewTea() {
 
 
   return (
-    <div>
+    <div className='new-tea-form'>
         <form>
             <div>
                 <label> Tea name:</label>
@@ -46,7 +46,7 @@ function NewTea() {
                 <input type='text' onChange={handleChange} name='img' value={form.img}></input>
             </div>
             
-            <Button onClick={handleSubmit}>Submit Tea</Button>
+            <Button onClick={handleSubmit} className='button'>Submit</Button>
         </form>
     </div>
   )

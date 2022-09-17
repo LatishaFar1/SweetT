@@ -4,6 +4,7 @@ import ShowTea from './components/ShowTea';
 import NavBar from './components/NavBar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
+import About from './components/About';
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
          
           <Route path='/tea' element={<ShowTea/>} />
 
+          <Route path='/about' element={ <About/>} />
+      
         </Routes>
 
       </Router>

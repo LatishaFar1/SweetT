@@ -7,6 +7,7 @@ function NewTea() {
     const [form, setForm] = useState({
         name: '',
         img: ''
+        // iced: ''
     })
 
     function handleChange(e){
@@ -25,7 +26,8 @@ function NewTea() {
 
         const newTea = {
             name: form.name,
-            img: form.img
+            img: form.img,
+            // iced: form.iced
         }
 
         axios.post('http://localhost:4000/new', newTea)
@@ -45,6 +47,11 @@ function NewTea() {
                 <label> Image URL:</label>
                 <input type='text' onChange={handleChange} name='img' value={form.img}></input>
             </div>
+
+            {/* <div>
+                <label> Is it iced?</label>
+                <input type='checkbox' onChange={handleChange} name='iced' value={form.iced}></input>
+            </div> */}
             
             <Button onClick={handleSubmit} className='button'>Submit</Button>
         </form>

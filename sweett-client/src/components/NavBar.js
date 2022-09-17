@@ -5,6 +5,7 @@ import { flexCenter, dFlex, flexBetweenCenter } from '../theme/styles';
 import Container from '@mui/material/Container';
 import {Link} from "react-router-dom";
 import {AiOutlineHome, AiOutlineCoffee} from 'react-icons/ai';
+import {IoIosInformationCircle} from 'react-icons/io';
 
 function NavBar() {
 
@@ -22,10 +23,16 @@ function NavBar() {
                   <AiOutlineHome size={20}/>
               </Link>
 
+              <Link to='/about'>
+              <IoIosInformationCircle size={20}/>
+              
+              </Link>
 
               <Link to='/tea'>
                 <AiOutlineCoffee size={20}/>
               </Link>
+              
+
 
             
               </li>

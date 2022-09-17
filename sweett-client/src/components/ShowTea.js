@@ -13,6 +13,7 @@ function ShowTea() {
     const [tea, setTea] = useState([{
         name: '',
         img: ''
+        // iced: ''
     }]);
 
 
@@ -55,6 +56,9 @@ function ShowTea() {
                             <Typography gutterBottom variant="h5" component="div">
                             {t.name}
                             </Typography>
+                            {/* <Typography gutterBottom variant="h5" component="div">
+                            {t.iced}
+                            </Typography> */}
                         </CardContent>
                         </CardActionArea>
                         </Card>
@@ -63,7 +67,10 @@ function ShowTea() {
             )}
 
         </Grid>
-    <div className="hide-form">
+
+
+ <div className='modal'>          
+    <div className="hide-form" id='popup'>
         <Button onClick={handleForm} className='hide-form-btn'  style={{
         borderRadius: 35,
         backgroundColor: '#2a2a2a',
@@ -79,7 +86,10 @@ function ShowTea() {
      
 
         </div>
+        </div>
 
+
+    
     </div>
   )
 }
